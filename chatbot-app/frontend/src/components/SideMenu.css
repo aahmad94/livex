@@ -1,0 +1,28 @@
+.side-menu {
+    width: 200px;
+    background-color: #fff;
+    height: 100vh;
+    padding-top: 20px;
+    box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+}
+
+.menu-item {
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #f0f0f0;
+}
+
+.menu-item.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+.icon {
+    margin-right: 10px;
+} 

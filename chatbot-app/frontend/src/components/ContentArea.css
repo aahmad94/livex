@@ -1,0 +1,22 @@
+.content-area {
+    padding: 20px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.content-area h2 {
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.content-area p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.highlight {
+    background-color: yellow;
+    padding: 2px;
+    border-radius: 2px;
+} 
