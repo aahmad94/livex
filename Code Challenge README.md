@@ -43,7 +43,7 @@ Please don't use this key for any other purpose. And don't share it with anyone 
 **Remember, don't commit it to any public repository.**
 
 ```
-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
+removed
 ```
 
 ### Cal.com API Reference

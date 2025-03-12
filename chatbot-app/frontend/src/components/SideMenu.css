@@ -1,9 +1,11 @@
 .side-menu {
-    width: 200px;
+    width: 220px;
     background-color: #fff;
-    height: 100vh;
+    height: 100%;
     padding-top: 20px;
-    box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-right: 1px solid #eaeaea;
+    flex-shrink: 0;
 }
 
 .menu-item {
@@ -11,18 +13,25 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.2s ease;
+    color: #555;
+    font-weight: 500;
+    border-left: 3px solid transparent;
 }
 
 .menu-item:hover {
-    background-color: #f0f0f0;
+    background-color: #f5f7fa;
+    color: #007BFF;
+    border-left-color: #007BFF;
 }
 
 .menu-item.active {
-    background-color: #007BFF;
-    color: white;
+    background-color: #e8f4ff;
+    color: #007BFF;
+    border-left-color: #007BFF;
 }
 
 .icon {
-    margin-right: 10px;
+    margin-right: 12px;
+    font-size: 18px;
 } 

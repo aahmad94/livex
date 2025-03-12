@@ -7,6 +7,7 @@ const Chatbot = () => {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState('');
     const [email, setEmail] = useState('');
+    const [emailSubmitted, setEmailSubmitted] = useState(false);
     const [timer, setTimer] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
     const messageViewRef = useRef(null);
@@ -53,6 +54,18 @@ const Chatbot = () => {
         }
     };
 
+    const handleEmailSubmit = () => {
+        if (email.trim()) {
+            setEmailSubmitted(true);
+        }
+    };
+
+    const handleEmailKeyPress = (e) => {
+        if (e.key === 'Enter' && email.trim()) {
+            setEmailSubmitted(true);
+        }
+    };
+
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
             sendMessage();
@@ -67,6 +80,7 @@ const Chatbot = () => {
     const closeChat = () => {
         setIsOpen(false);
         setTimer(0);
+        setEmailSubmitted(false);
     };
 
     return (
@@ -85,7 +99,7 @@ const Chatbot = () => {
                         </div>
                     </div>
                     
-                    {!email ? (
+                    {!emailSubmitted ? (
                         <div className="email-input">
                             <h3>Enter your email to start chatting</h3>
                             <input
@@ -93,11 +107,11 @@ const Chatbot = () => {
                                 placeholder="Your email address..."
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                onKeyPress={handleKeyPress}
+                                onKeyPress={handleEmailKeyPress}
                             />
                             <button 
-                                onClick={() => email && setEmail(email)}
-                                disabled={!email}
+                                onClick={handleEmailSubmit}
+                                disabled={!email.trim()}
                             >
                                 Start Chatting
                             </button>

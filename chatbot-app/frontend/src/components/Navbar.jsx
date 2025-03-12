@@ -4,7 +4,7 @@ import './Navbar.css';
 const Navbar = ({ onSearch }) => {
     return (
         <nav className="navbar">
-            <div className="logo">ChatBot</div>
+            <div className="navbar-logo">ChatBot</div>
             <input
                 type="text"
                 placeholder="Search..."
