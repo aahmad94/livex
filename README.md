@@ -2,6 +2,62 @@
 
 ![Chatbot Application Screenshot](./image.png)
 
+## Quick Start Guide
+
+### Running the Application
+
+#### Backend Setup
+
+1. Navigate to the backend directory:
+```bash
+cd chatbot-app/backend
+```
+
+2. Create and activate a virtual environment:
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Set up environment variables:
+   - Create or modify the `.env` file in the backend directory with the following content:
+   ```
+   OPENAI_API_KEY=your_openai_api_key
+   CALCOM_API_KEY=your_calcom_api_key
+   ```
+   - Replace `your_openai_api_key` with your OpenAI API key
+   - Replace `your_calcom_api_key` with your Cal.com API key
+   - Note: If you don't have a Cal.com API key, the application will use a mock implementation for Cal.com API calls
+
+5. Run the backend server:
+```bash
+python -m uvicorn main:app --reload --port 8000
+```
+   - The backend server will be available at http://localhost:8000
+
+#### Frontend Setup
+
+1. Open a new terminal window and navigate to the frontend directory:
+```bash
+cd chatbot-app/frontend
+```
+
+2. Install the required dependencies:
+```bash
+npm install
+```
+
+3. Run the frontend development server:
+```bash
+npm run dev
+```
+   - The frontend application will be available at http://localhost:5173 (or another port if 5173 is in use)
+
 **Objective:**  
 Create a responsive website using **React JS** with a chatbot interface, navigation elements, and dynamic content handling.
 
@@ -62,62 +118,6 @@ Create a responsive website using **React JS** with a chatbot interface, navigat
 # Chatbot Application
 
 A full-stack chatbot application with React frontend and FastAPI backend, integrating OpenAI function calling and Cal.com API.
-
-## Quick Start Guide
-
-### Running the Application
-
-#### Backend Setup
-
-1. Navigate to the backend directory:
-```bash
-cd chatbot-app/backend
-```
-
-2. Create and activate a virtual environment:
-```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. Install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-4. Set up environment variables:
-   - Create or modify the `.env` file in the backend directory with the following content:
-   ```
-   OPENAI_API_KEY=your_openai_api_key
-   CALCOM_API_KEY=your_calcom_api_key
-   ```
-   - Replace `your_openai_api_key` with your OpenAI API key
-   - Replace `your_calcom_api_key` with your Cal.com API key
-   - Note: If you don't have a Cal.com API key, the application will use a mock implementation for Cal.com API calls
-
-5. Run the backend server:
-```bash
-python -m uvicorn main:app --reload --port 8000
-```
-   - The backend server will be available at http://localhost:8000
-
-#### Frontend Setup
-
-1. Open a new terminal window and navigate to the frontend directory:
-```bash
-cd chatbot-app/frontend
-```
-
-2. Install the required dependencies:
-```bash
-npm install
-```
-
-3. Run the frontend development server:
-```bash
-npm run dev
-```
-   - The frontend application will be available at http://localhost:5173 (or another port if 5173 is in use)
 
 ### Using the Application
 
